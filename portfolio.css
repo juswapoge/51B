@@ -1,0 +1,381 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html{
+  font-size: 10px;
+  font-family: 'Lilita One', cursive;
+  
+}
+
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  
+}
+
+nav .logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#nav-toggle{
+  display: none;
+}
+
+nav ul {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: ;
+}
+
+nav ul li {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #f6d365;
+}
+
+.nav-toggle-label {
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-left: auto;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+}
+
+.nav-toggle-label span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.nav-toggle-label span:nth-child(1) {
+  top: 0px;
+}
+
+.nav-toggle-label span:nth-child(2), .nav-toggle-label span:nth-child(3) {
+  top: 18px;
+}
+
+.nav-toggle-label span:nth-child(4) {
+  top: 36px;
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-toggle:checked ~ ul {
+  display: block;
+  transform: translateY(0);
+}
+
+
+
+
+.container{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header{
+  background-image: url(Picsart_23-02-10_02-33-48-321.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+}
+
+#header .header{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+
+#header::after{
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#header h1{
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color: white;
+}
+
+#header h1 span{
+  color: red;
+}
+/*--------about me---------*/
+
+#about{
+  background-color: black;
+}
+
+#about .about{
+  flex-direction: column-reverse;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #fff;
+}
+
+#about .pic{
+  width: 350px;
+  height: 550px;
+ 
+}
+
+#about .info{
+  font-size: 20px;
+  
+}
+
+#about h1 span{
+  color: red;
+}
+
+
+/*-----history-----*/
+
+#history{
+  background-color: black;
+  color: #fff;
+}
+
+#history .history{
+  flex-direction: column;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+
+
+
+#history .htitle{
+ font-size: 40px;
+}
+
+#history .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+#history .box{
+  justify-content: space-evenly
+}
+
+#history .hitem1{
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px;
+  border-radius: 10px;
+  background-image: url(Screenshot_2023-02-18-03-19-29-792-edit_com.facebook.katana.jpg);
+  background-size: cover;
+  margin: 10px 5%;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+#history .hitem2{
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: bottom;
+  flex-direction: column;
+  padding: 100px;
+  border-radius: 10px;
+  background-image: url(Screenshot_2023-02-18-03-16-54-555-edit_com.facebook.katana.jpg);
+  margin: 10px 5%;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  color:#fff;
+  
+  
+}
+
+#history .hitem1::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: .4;
+  z-index: -1;
+}
+
+#history .hitem2::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: .4;
+  z-index: -1;
+}
+
+#history .hitem2 h1 p{
+  display: block;
+  width: fit-content;
+  position: relative;
+  color: #fff;
+}
+
+#history .hitem1 h1 p{
+  display: block;
+  width: fit-content;
+  position: relative;
+  color: #fff;
+}
+
+#history .hitem1 a{
+  text-decoration: none;
+  color: #fff;
+}
+
+#history .hitem2 a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/*---*/
+/* query */
+@media screen and (min-height:1200px) {  
+  #about .about{
+    flex-direction: row;
+  }
+  
+  #history .box{
+    display: flex;
+  }
+    .menu-icon {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 0 15px;
+  }
+  nav {
+    padding: 30px 100px;
+  }
+
+  nav .logo {
+    font-size: 32px;
+  }
+
+  nav ul {
+    display: flex;
+    position: static;
+    width: auto;
+    transform: none;
+  }
+
+  nav ul li {
+    margin-left: 40px;
+  }
+
+  nav ul li:first-of-type {
+    margin-left: 0;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 10px 0;
+    transition: color 0.2s ease-in-out;
+  }
+
+  nav ul li a:hover {
+    color: #f6d365;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+}
